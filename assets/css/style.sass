@@ -1,0 +1,762 @@
+/*************************************************************/
+/*|||||||||||||||||||||| SASS Project |||||||||||||||||||||||*/
+/*************************************************************/
+
+
+/********* Fonts **********/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap')
+
+
+$pt-5: 5px
+$pt-10: 10px
+$pt-20: 20px
+$pt-30: 30px
+$pt-40: 40px
+$pt-50: 50px
+$pt-60: 60px
+$pt-70: 70px
+$pt-80: 80px
+$pb-5: 5px
+$pb-10: 10px
+$pb-20: 20px
+$pb-30: 30px
+$pb-40: 40px
+$pb-50: 50px
+$pb-60: 60px
+$pb-70: 70px
+$pb-80: 80px
+$pl-5: 5px
+$pl-10: 10px
+$pl-20: 20px
+$pl-30: 30px
+$pl-40: 40px
+$pl-50: 50px
+$pl-60: 60px
+$pl-70: 70px
+$pl-80: 80px
+$pr-5px: 5px
+$pr-10: 10px
+$pr-20: 20px
+$pr-30: 30px
+$pr-40: 40px
+$pr-50: 50px
+$pr-60: 60px
+$pr-70: 70px
+$pr-80: 80px
+$mt-5: 50px
+$mt-10: 10px
+$mt-20: 20px
+$mt-30: 30px
+$mt-40: 40px
+$mt-50: 50px
+$mt-60: 60px
+$mt-70: 70px
+$mt-80: 80px
+$mb-5: 5px
+$mb-10: 10px
+$mb-20: 20px
+$mb-30: 30px
+$mb-40: 40px
+$mb-50: 60px
+$mb-70: 70px
+$mb-80: 80px
+$ml-5: 5px
+$ml-10: 10px
+$ml-20: 20px
+$ml-30: 30px
+$ml-40: 40px
+$ml-50: 50px
+$ml-60: 60px
+$ml-70: 70px
+$ml-80: 80px
+$mr-5: 5px
+$mr-10: 10px
+$mr-20: 20px
+$mr-30: 30px
+$mr-40: 40px
+$mr-50: 50px
+$mr-60: 60px
+$mr-70: 70px
+$mr-80: 80px
+$bg-main: #363590
+$bg-sub: #bf1178
+$bg-suber: #c32181
+$main-color: #222222
+$sub-color: #999999
+$font: Poppins, sans-serif
+$white: #ffffff
+$bg-white: #ffffff
+$radius: 20px
+$btn-radius: 10px
+$btn-padding: 11px 35px
+$btn-padding-sub: 10px 37px
+$absolute: absolute
+$relative: relative
+$fixed: fixed
+$padding-cmn: 30px
+$full-radius: 50%
+$hide: none
+$show: block
+$hidden: hidden
+$inline-block: inline-block
+$text-decoration: none
+$transition: all 0.3s ease-in-out
+$uppercase: uppercase
+$content: ""
+$border: 2px solid #212121
+$full: 100%
+
+
+/***** Combine 2 classes together using &:hover method - eg:below **/
+/*header
+	&.left
+		h1
+			color: $main-color*/
+
+/************************************/
+/*|||||||| Common Items ||||||||||||*/
+/************************************/
+body
+	font-size: 14px
+	font-family: $font
+
+h1, h2, h3, h4, h5, h6
+	color: $main-color
+	font-weight: 700
+
+a:hover
+	text-decoration: $text-decoration
+
+p 
+	color: $sub-color
+
+.list-inline
+	display: $inline-block
+
+.min-height
+	min-height: 600px
+
+.btn_main 
+	color: $white
+	font-size: 14px
+	padding: $btn-padding
+	border-radius: $btn-radius
+	background-color: $bg-main
+
+.btn_sub
+	color: $white
+	padding: $btn-padding
+	font-size: 14px
+	border-radius: $btn-radius
+	background-color: $bg-sub
+
+	&:hover
+		color: $white
+		background-color: $bg-suber
+
+.btn_border
+	color: $main-color
+	padding: $btn-padding-sub
+	font-size: 14px
+	border-radius: $btn-radius
+	border: $border
+
+	&:hover
+		color: $white
+		background-color: $bg-sub
+		border-color: $bg-sub
+
+.portfolio_button
+	margin-top: $mt-70
+	
+	.btn_border.white
+		color: $white
+		border: 2px solid #ffffff
+
+		&:hover
+			background-color: $bg-sub
+			border-color: $bg-sub
+
+.bx_shadow_dark
+	box-shadow: 0px 6px 15px 0px #00000033
+
+.bx_shadow_blue
+	box-shadow: 0px 6px 15px 0px #4a63e733
+
+.portfolio_cmn
+	border-radius: $radius
+	padding: 65px 40px 60px
+	background-color: $white
+	margin-bottom: $mb-50
+
+h3.prof_head
+	font-size: 24px
+
+.prof_head
+	&:after
+		content: ""
+		height: 5px
+		width: 30px
+		display: $show
+		margin-top: 14px
+		border-radius: 25px
+		background: $bg-sub
+
+.text-dark 
+	font-weight: 500
+	color: $main-color
+
+/********** End *********/
+
+
+
+ul
+	padding: 0
+
+	li
+		list-style: none
+		line-height: 3
+		transition: $transition
+
+nav
+	padding-top: $pt-40
+
+	li 
+		a
+			color: $white
+			font-weight: 300
+			font-size: 13px
+			padding: 0 !important
+			transition: $transition
+			position: $relative
+
+nav
+	li 
+		a:hover
+			padding-left: $pl-5 !important
+			color: $white
+			transition: $transition
+nav
+	li
+		a
+			&.active
+				&:before
+					content: $content
+					height: 10px
+					display: $show
+					height: 18px
+					left: -30px
+					top: 11px
+					width: 3px
+					position: $absolute
+					background-color: $white
+					transition: $transition
+
+.prof_icons, .portfolio_button
+	a
+		svg 
+			margin-right: $mr-10
+			font-size: 20px
+			width: 20px
+
+nav
+	li
+		.bi-front, .bi-ui-checks-grid
+			font-size: 18px
+
+.prof_opt
+	top: 2px
+	position: $relative
+	text-transform: none
+
+.main 
+	padding-top: $pt-50
+
+.mobile_header
+		display: $hide
+
+.profile_sh
+	width: 265px
+
+.left
+	color: $white
+	width: 265px
+	position: $fixed
+	border-radius: $radius
+	padding: $padding-cmn
+	background-color: $bg-main
+	min-height: 600px
+	max-height: 600px
+
+.profile
+	width: 70px
+	height: 70px
+	overflow: $hidden
+	border-radius: $full-radius
+
+	img
+		width: 70px
+
+.prof_name
+	color: $white
+	font-size: 28px
+	font-weight: 600
+	display: $show
+
+a
+	&.prof_name
+		&:hover
+			color: $white
+
+.profile_sec 
+	span
+		font-size: 12px
+		text-transform: uppercase
+		font-weight: 100
+		letter-spacing: 1px
+
+.profile_desc
+	width: 875px
+	float: right
+	transition: $transition
+
+.list-inline
+		margin-right: 5px
+
+.list-inline
+	a
+		color: #999999
+		width: 35px
+		height: 35px
+		border-radius: 6px
+		display: $show
+		text-align: center
+		border: 1px solid #999999
+		transition: $transition
+
+		i
+			top: -3px
+			font-size: 13px
+			position: $relative
+
+.list-inline
+	a
+		&:hover
+			color: $main-color
+			transition: $transition
+			background-color: #ffffff
+			border-color: $white
+
+.profile_intro
+	border-radius: 20px
+	background-size: cover
+	background-position: center
+	position: $relative
+	overflow: hidden
+	margin-bottom: 50px
+	background-attachment: fixed
+	background-image: url(../img/profile.jpg)
+
+.overlay
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	opacity: 0.9
+	position: $absolute
+	background-color: $bg-main
+
+.profile_intro
+	.card
+		color: $white
+		padding: 20px
+		background-color: transparent
+
+.name_intro
+	width: 80%
+	margin: 0 auto
+
+.name_intro
+	h1
+		color: #ffffff
+		font-size: 60px
+		font-weight: 700
+
+.name_intro
+	p
+		color: $white
+		font-size: 16px
+
+.profile_about
+	margin-top: $mt-70
+
+.profile_img
+	width: 150px
+	height: 150px
+	border-radius: 50%
+	overflow: hidden
+
+.profile_img
+	img
+		width: 150px
+		height: auto
+
+.about_desc
+	.prof_head
+		&:after
+			display: none
+
+.prof_content 
+	margin-top: $mt-70
+
+	p
+		line-height: 25px
+		letter-spacing: 0.6px
+
+.skillbar 
+	position: relative 
+	display: block 
+	margin-bottom: 24px 
+	width: 100% 
+	background: #eee 
+	height: 10px 
+	border-radius: 12px 
+
+.skillbar-bar 
+	height: 100% 
+	width: 0px 
+	background: #6adcfa 
+	border-radius: 12px 
+	background: linear-gradient(to right, #363590 0%, #bf117840 100%) 
+
+.skill-bar-percent 
+	position: absolute 
+	right: 10px 
+	top: -38px 
+	font-size: 10px 
+	height: 35px 
+	line-height: 35px 
+	color: #ffffff 
+	color: rgba(0, 0, 0, 0.4) 
+
+.skill-progress-bar 
+	p 
+		font-weight: 600 
+		color: #333 
+		margin-bottom: 10px 
+
+.services_cmn
+	padding: 5px
+
+.services_each
+	padding: 20px 10px
+	border-radius: 10px
+	border: 1px solid #eee
+
+.serv_sec
+	margin-top: $mt-70
+
+.serv_sec
+	h6
+		font-size: 15px
+		font-weight: 600
+		margin-top: $mt-20
+		margin-bottom: 0
+
+.services_each
+	svg
+		font-size: 25px
+		width: 30px
+		height: 30px
+		color: #bf1178
+
+.experience_sec, .portfolio_sec, .contact_sec
+	margin-top: $mt-70
+
+.exp_pa
+	position: $relative
+	padding-top: 70px
+
+.year 
+	float: left
+	width: 20%
+	color: #999
+	position: $relative
+
+	&:after
+		content: ""
+		position: absolute
+		width: 8px
+		height: 8px
+		border: 1px solid #bf1178
+		background-color: #fff
+		border-radius: 100%
+		padding: 4.5px
+		top: 15%
+		right: -8px
+		z-index: 1
+
+.exp_cmp
+	float: left
+	width: 80%
+	margin: 0 0 86px
+	padding-left: 60px
+
+	h4
+		font-size: 18px
+		margin-bottom: 20px
+
+.experience_line
+	position: absolute
+	top: 0px
+	left: calc(20% + 2px)
+	bottom: 0px
+	width: 1px
+	background: #bf1178
+
+	&:before, &:after
+		content: ""
+		display: block
+		border-radius: 100%
+		background: #bf1178
+		position: absolute
+		left: -3px
+		height: 7px
+		width: 7px
+
+	&:before
+		top: 0
+
+	&:after
+		bottom: 0
+
+.contact_info
+	margin-bottom: $mb-40
+
+	svg
+		width: 23px
+		height: 23px
+		float: left
+		color: #bf1178
+
+.details
+	margin-left: 40px
+
+	h4
+		font-size: 18px
+
+.contact_details
+	.form-control
+		font-size: 14px
+		border-radius: 8px
+		border: 1px solid #E3E3E3
+		height: auto
+		padding: 11px .75rem
+
+		&:focus
+			box-shadow: none
+			border: 1px solid #bf1178
+
+
+
+
+/*************************************************************/
+/*|||||||||||||||||||||| Media Query |||||||||||||||||||||||*/
+/*************************************************************/
+
+
+/***** Min Width and Max width *****/
+@media (max-width: 1199px) and (min-width: 992px) 
+	.profile_desc 
+		width: 675px
+
+	.profile_img 
+		width: 125px
+		height: 125px
+
+		img
+			width: 133px
+
+	.prof_content
+		margin-top: 25px
+
+	.filter_sec 
+		li
+			span
+				padding: 2px 25px
+
+	.details
+		p
+			word-break: break-all
+
+
+/***** Min Width *****/
+@media (min-width: 1200px)
+	.container
+		max-width: 1170px
+
+
+
+
+
+/***** Max Width *****/
+@media (max-width: 992px)
+	.mobile_header
+		display: $show
+		padding: 10px 15px
+		width: 100%
+		border-radius: 15px
+		margin-bottom: 15px
+		background-color: #363590
+
+		h4
+			margin-top: 3px
+			margin-bottom: 0
+
+	.nav-links
+		float: left
+		margin-top: 3px
+		margin-right: 15px
+
+	.burger 
+		&:hover
+			cursor: pointer
+
+		div 
+			width: 30px
+			height: 2px
+			margin: 7px
+			position: relative
+			background-color: #ffffff
+			transition: all 300ms ease-in
+	
+	.burger 
+		&:nth-child(2) 
+			width: 20px
+			left: 9px
+	
+	@keyframes navLinkFade 
+		from 
+			opacity: 0
+			transform: translateX(50px)
+      
+		to 
+			opacity: 1
+			transform: translateX(0px)
+      
+	.toggle 
+		.line1 
+			transform: rotate(-45deg) translate(-5px, 8px)
+
+	.toggle 
+		.line2 
+			opacity: 0
+
+	.toggle 
+		.line3 
+			transform: rotate(45deg) translate(-5px, -8px)
+    
+
+	.profile_sh
+		.left
+			left: -270px
+			transition: $transition
+
+	.profile_sh
+		&.open
+			.left
+				left: 15px
+				transition: $transition
+
+	.profile_desc
+		left: 0
+		float: none
+		width: 100%
+		position: $relative
+
+	.profile_desc
+		&.open
+			left: 285px
+			transition: $transition
+
+	.prof_img_sm
+		width: 40px
+		height: 40px
+		overflow: $hidden
+		border-radius: 50%
+		float: left
+		margin-right: 10px
+
+		img
+			width: 40px
+
+	.filter_sec 
+		li
+			span 
+				padding: 2px 28px
+
+@media (max-width: 767px)
+	.main
+		padding-top: 30px
+
+	.profile_desc
+		&.open
+			left: 275px
+
+	.min-height
+		min-height: 450px
+
+	.name_intro
+		width: 95%
+
+		h1
+			font-size: 45px
+
+	.profile_about, .about_desc, .serv_sec, .experience_sec, .portfolio_sec, .contact_sec
+		margin-top: 35px
+
+	.prof_content 
+		margin-top: 20px
+
+	.services_each
+		margin-bottom: 25px
+
+	.filter_sec 
+		li
+			span
+				padding: 2px 14px
+
+	.mob_dm
+		margin-bottom: 16px
+
+
+@media (max-width: 576px)
+	.profile_desc
+		padding: 0 15px
+
+	.mobile_header 
+		h4
+			font-size: 20px
+			margin-top: 8px
+
+	.name_intro
+		h1
+			font-size: 35px
+
+	.portfolio_button
+		margin-top: 40px
+
+	.btn_sub, .btn_border
+		width: 100%
+
+	.btn_sub
+		margin-bottom: 15px
+
+	.portfolio_cmn
+		padding: 35px 20px 35px
+
+	.exp_cmp
+		padding-left: 35px
+
+	.profile_intro, .portfolio_cmn
+		margin-bottom: 30px
